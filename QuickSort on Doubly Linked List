@@ -1,0 +1,16 @@
+Node* partition(Node *l, Node *h){
+    //Your code goes here
+    Node* c=l;
+    Node* q=l;
+    Node* p = h;
+    while(c!=h){
+        if(c->data < p->data){
+            swap(c->data,q->data);
+            q=q->next;
+        }
+        c=c->next;
+    }
+    swap(q->data,p->data);
+    return q;
+
+}
