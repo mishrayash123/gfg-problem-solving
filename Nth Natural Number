@@ -1,0 +1,13 @@
+class Solution{
+	public:
+    	long long findNth(long long N)
+    {
+       long long alpha=0, beta=1,M=9;
+    while( N > 0 ) {
+        alpha += (beta * (N%M));
+        N/=M;
+        beta*=10;
+    }
+    return alpha;
+    }
+};
